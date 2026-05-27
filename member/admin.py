@@ -34,9 +34,6 @@ class MemberAdmin(admin.ModelAdmin):
         'joined_at'
     ]
 
-    list_editable = [
-        'is_active'
-    ]
 
     ordering = [
         '-joined_at'
@@ -56,7 +53,6 @@ class MemberAdmin(admin.ModelAdmin):
                 'last_name',
                 'dob',
                 'gender',
-                'blood_group'
             )
         }),
 
@@ -73,19 +69,19 @@ class MemberAdmin(admin.ModelAdmin):
             'fields': (
                 'height_cm',
                 'weight_kg',
-                'medical_conditions'
+                'medical_conditions',
+                'blood_group'
             )
         }),
 
         ('Membership Details', {
             'fields': (
                 'joined_at',
-                'is_active',
-                'notes'
+                'is_active'
             )
         }),
 
-        ('System Information', {
+        ('Time Stamp', {
             'fields': (
                 'created_at',
                 'updated_at'
