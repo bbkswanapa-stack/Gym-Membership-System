@@ -35,7 +35,6 @@ class Member(models.Model):
     
     joined_at = models.DateField()
     is_active = models.BooleanField(default=False)
-    notes = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     medical_conditions = models.TextField(null=True, blank=True)
